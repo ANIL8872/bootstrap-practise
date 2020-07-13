@@ -1,25 +1,18 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Container, Col, Row } from 'react-bootstrap';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Row>
+        <Col style={{backgroundColor:"red"}}xs={{ span: 7 }}>First, but unordered</Col>
+        <Col style={{backgroundColor:"green"}}xs={{ order: 2 }}>Second, but last</Col>
+        <Col xs={{ order: 1}}>Third, but second</Col>
+      </Row>
+    </Container>
   );
 }
 
